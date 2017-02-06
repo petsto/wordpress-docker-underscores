@@ -1,0 +1,25 @@
+version: '2'
+
+services:
+    
+    # MariaDB Setup
+    mysql:
+        image: mariadb:10.1.21
+        ports:
+            - 8081:3306
+        volumes:
+            - ./mysql:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: wp
+    
+    # Wordpress Setup
+    wordpress:
+        image: wordpress:4.7.2-apache
+        ports:
+            - 8080:80
+        volumes:
+            - ./wp-content:/var/www/html/wp-content
+        links:
+            - mysql
+        environment:
+            WORDPRESS_DB_PASSWORD: wp
