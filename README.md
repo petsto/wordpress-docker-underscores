@@ -1,3 +1,5 @@
+⚠️ This bad boy is very old. Please use something newer. 😅 🖖
+
 # Docker + Wordpress + Underscores Theme 
 
 ![Docker](https://www.docker.com/sites/default/files/legal/small_h.png)
